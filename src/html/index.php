@@ -18,7 +18,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="./index.php" class="text-nowrap logo-img">
             <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -33,7 +33,7 @@
               <span class="hide-menu">Accueil</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="./index.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -45,7 +45,7 @@
               <span class="hide-menu">INTERFACE DE GESTION</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./festival.html" aria-expanded="false">
+              <a class="sidebar-link" href="./festival.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-confetti-off"></i>
                 </span>
@@ -53,7 +53,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./festivalier.html" aria-expanded="false">
+              <a class="sidebar-link" href="./festivalier.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-friends"></i>
                 </span>
@@ -62,7 +62,7 @@
             </li>
            
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./vehicule.html" aria-expanded="false">
+              <a class="sidebar-link" href="./vehicule.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-car"></i>
                 </span>
@@ -70,7 +70,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./utilisateur.html" aria-expanded="false">
+              <a class="sidebar-link" href="./utilisateur.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-users"></i>
                 </span>
@@ -82,7 +82,7 @@
               <span class="hide-menu">AUTH</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+              <a class="sidebar-link" href="./authentication-login.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -90,7 +90,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+              <a class="sidebar-link" href="./authentication-register.php" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
@@ -148,7 +148,7 @@
                       <p class="mb-0 fs-3">Mon compte</p>
                     </a>
                    
-                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="./authentication-login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
