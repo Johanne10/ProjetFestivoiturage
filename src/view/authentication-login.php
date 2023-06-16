@@ -37,7 +37,7 @@
                     <div class="form-check">
                       <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
                       <label class="form-check-label text-dark" for="flexCheckChecked">
-                        Souvernez vous de ce dispositif
+                        Se souvenir de moi
                       </label>
                     </div>
                     <a class="text-primary fw-bold" href="./index.php">Mot de passe oublié ?</a>
