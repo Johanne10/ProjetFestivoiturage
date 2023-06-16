@@ -159,6 +159,36 @@
       <div class="container-fluid">
         <div class="container-fluid">
          <!--prochain code ici-->
+         <a href="index.php?action=create" class="btn-primary">Ajouter festival</a>
+         <tablbe class="table table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Date</th>
+              <th>Nom</th>
+              <th>Localisation</th>
+              <th>Photo</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php /**@var \app\models\Festivals[] $data */
+            foreach ($data as $festival) :?>
+            <tr>
+              <td><?=$festival->getId_festival()?></td>
+              <td><?=$festival->getDate()?></td>
+              <td><?=$festival->getNom()?>$</td>
+              <td><?=$festival->getLocalisation()?>$</td>
+              <td><?=$festival->getPhoto()?>$</td>
+
+              <td>
+                <a href="index.php?action=edit&id=<?php echo $festival->getId_festival()?>" class="btn btn-success-sm">Modifier</a>
+                <a onclick="return confirm('Voulez vous vraiment supprimer le festival <?=$festival->getNom()?>');" href="index.php?action=destroy&id=<,php echo $festival->getId_festival()?>" class="btn btn-danger btn-sm">Supprimer</a>
+              </td>
+            </tr>
+          <?php endforeach;?> 
+          </tbody>  
+        </table>  
     </div>
   </div>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>

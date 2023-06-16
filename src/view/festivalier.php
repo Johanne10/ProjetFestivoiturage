@@ -158,7 +158,36 @@
       <!--  Header End -->
       <div class="container-fluid">
         <div class="container-fluid">
-       
+        <a href="index.php?action=create" class="btn btn-primary">Ajouter</a>
+        <table class="table table-striped">
+          <theah>
+            <tr>
+              <th>Id</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Date de présence</th>
+              <th>Pseudo</th>
+              <th>Mot de passe</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php /**@var \app\models\Festivalier[] $data */
+            foreach ($data as $festivalier): ?>
+            <tr>
+              <td><?=$festivalier->getId() ?></td>
+              <td><?=$festivalier->getNom_festivalier() ?></td>
+              <td><?=$festivalier->getPrenom() ?>$</td>
+              <td><?=$festivalier->getDate_de_presence() ?></td>
+              <td><?=$festivalier->getPseudo() ?>$</td>
+              <td>
+                <a href="index.php?action=edit&id=<?php echo $festivalier->getPrenom() ?>" class="btn btn-success btn-sm">Modifier</a>
+                <a onclick="return comfirm('Voulez vous vraiment supprimer le festivalier <?$festivalier->getModel() ?>');" href="index.php?action=destroy&id=<?php echo $festivalier->getId_festivalier() ?>" class="btn btn-danger btn-sm">Supprimer</a>
+              </td>
+            </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
