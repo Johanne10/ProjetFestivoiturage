@@ -34,7 +34,7 @@
               <span class="hide-menu">Accueil</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.php" aria-expanded="false">
+              <a class="sidebar-link" href="index.php?action=index" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -83,7 +83,7 @@
               <span class="hide-menu">AUTH</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.php" aria-expanded="false">
+              <a class="sidebar-link" href="index.php?action=authentication-login" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -91,7 +91,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.php" aria-expanded="false">
+              <a class="sidebar-link" href="index.php?action=authentication-register" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
