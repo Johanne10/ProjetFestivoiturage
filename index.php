@@ -7,6 +7,7 @@ use app\Controllers\FestivalierController;
 use app\Controllers\VehiculeController;
 use app\Controllers\UtilisateurController;
 use app\Controllers\Authentification_loginController;
+use app\Controllers\Authentification_registerController;
 
 
 
@@ -43,10 +44,13 @@ if (isset($_GET['action'])) {
         case 'destroy':
             VoitureController::destroyAction();
             break;
-        case 'authentification-login':
+        case 'authentication-login':
         Authentification_loginController::indexAction();
                 break;
-        
+        case 'authentication-register':
+        Authentification_registerController::indexAction();
+            break;
+
         default:
             echo "Page Not found 404";
             break;

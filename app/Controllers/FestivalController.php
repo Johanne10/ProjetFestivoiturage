@@ -4,13 +4,11 @@ namespace app\Controllers;
 
 use app\models\Festival;
 
-class FestivalController extends BaseController
-{
+class FestivalController extends BaseController{
     /**
      * @return Festival
      */
-    public static function getModel()
-    {
+    public static function getModel(){
         if (is_null(static::$model)) {
             static::$model = new Festival();
         }
@@ -18,8 +16,7 @@ class FestivalController extends BaseController
     }
 
 
-    public static function indexAction()
-    {
+    public static function indexAction(){
         // Modele ( Les donnees) les Festivals
         $festivals = static::getModel()->latest();
 
@@ -27,13 +24,11 @@ class FestivalController extends BaseController
         static::view("festival", $festivals);
     }
 
-    public static function createAction()
-    {
+    public static function createAction(){
         static::view('create');
     }
 
-    public static function storeAction()
-    {
+    public static function storeAction(){
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $created = static::getModel()
                 ->setDate($_POST['date'])
@@ -49,13 +44,11 @@ class FestivalController extends BaseController
         }
     }
 
-    public static function editAction()
-    {
+    public static function editAction(){
         static::view('edit', self::getModel()::view($_GET['id_festival']));
     }
 
-    public static function updateAction()
-    {
+    public static function updateAction(){
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $updated = static::getModel()
                 ->setDate($_POST['date'])
