@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
-  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="./assets/css/styles.min.css" />
 </head>
 
 <body>
@@ -21,9 +21,9 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
+                  <img src="./assets/images/logos/dark-logo.svg" width="180" alt="">
                 </a>
-                <p class="text-center">Application pour recenser les voitures das les festivals</p>
+                <p class="text-center">Application pour le recensement de vehicule pour les festivals</p>
                 <form>
                   <div class="mb-3">
                     <label for="exampleInputtext1" class="form-label">Nom</label>
@@ -40,8 +40,8 @@
                   </div>
                   <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Enregistrer</a>
                   <div class="d-flex align-items-center justify-content-center">
-                    <p class="fs-4 mb-0 fw-bold">Vous avez déja un compte?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Se connecter</a>
+                    <p class="fs-4 mb-0 fw-bold">Vous avez dÃ©ja un compte?</p>
+                    <a class="text-primary fw-bold ms-2" href="index.php?action=authentication-login">Se connecter</a>
                   </div>
                 </form>
               </div>
@@ -51,8 +51,8 @@
       </div>
     </div>
   </div>
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
