@@ -40,7 +40,7 @@
                   </div>
                   <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Enregistrer</a>
                   <div class="d-flex align-items-center justify-content-center">
-                    <p class="fs-4 mb-0 fw-bold">Vous avez déja un compte?</p>
+                    <p class="fs-4 mb-0 fw-bold">Vous avez déjà un compte?</p>
                     <a class="text-primary fw-bold ms-2" href="index.php?action=authentication-login">Se connecter</a>
                   </div>
                 </form>
