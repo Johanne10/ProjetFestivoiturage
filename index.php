@@ -8,8 +8,7 @@ use app\Controllers\VehiculeController;
 use app\Controllers\UtilisateurController;
 use app\Controllers\Authentification_loginController;
 use app\Controllers\Authentification_registerController;
-
-
+use app\Controllers\IndexController;
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -50,9 +49,16 @@ if (isset($_GET['action'])) {
         case 'authentication-register':
         Authentification_registerController::indexAction();
             break;
+        case 'index':
+        IndexController::indexAction();
+            break;
+
 
         default:
-            echo "Page Not found 404";
+
+
             break;
     }
+}{
+    IndexController::indexAction();
 }
