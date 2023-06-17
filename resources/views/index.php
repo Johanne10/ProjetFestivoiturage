@@ -17,7 +17,7 @@ ob_start();
                     <label for="exampleInput" class="form-label">Nombre de passager </label>
                     <input type="number" class="form-control" id="exampleInput" aria-describedby="textHelp">
                     <br/>
-                    <a href="index.php?action=create" class="btn btn-primary">Recherche</a>
+                    <a href="index.php?action=reach" class="btn btn-primary">Recherche</a>
                   </form>
 
     
