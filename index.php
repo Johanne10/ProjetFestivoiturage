@@ -10,6 +10,8 @@ use app\Controllers\Authentification_loginController;
 use app\Controllers\Authentification_registerController;
 use app\Controllers\IndexController;
 
+
+
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
