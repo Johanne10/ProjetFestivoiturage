@@ -29,7 +29,11 @@ ob_start();
                 <td><?= $festival->getDate() ?></td>
                 <td><?= $festival->getNom() ?> </td>
                 <td><?= $festival->getLocalisation() ?> </td>
-                <td><?= $festival->getPhoto() ?> </td>
+                <td> <?php
+        $image = $festival->getPhoto();
+        $imagePath = "assets/images/festival" . $image;
+        echo '<img src="' . $imagePath . '" alt="Image">';
+        ?> </td>
                 
                 <td>
                     <a href="index.php?action=edit&id=<?php echo $festival->getId_festival() ?>" class="btn btn-success btn-sm">Modifier</a>

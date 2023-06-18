@@ -138,3 +138,4 @@ class Festival extends Model
         return $sqlState->execute([$id_festival]);
     }
 }
+?>
