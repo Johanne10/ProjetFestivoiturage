@@ -9,8 +9,7 @@ ob_start();
    <path d="M12 5l0 14"></path>
    <path d="M5 12l14 0"></path>
 </svg>Ajouter festival</a>
-&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Recherche par le nom...">
-    <table class="table table-striped" id="myTable">
+    <table class="table table-striped">
         <thead>
         <tr>
             <th>Id</th>
@@ -31,10 +30,11 @@ ob_start();
                 <td><?= $festival->getNom() ?> </td>
                 <td><?= $festival->getLocalisation() ?> </td>
                 <td> <?php
-        $image = $festival->getPhoto();
-        $imagePath = "assets/images/festival" . $image;
-        echo '<img src="' . $imagePath . '" alt="Image">';
-        ?> </td>
+                $image = $festival->getPhoto();
+                $imagePath = "assets/images/festival/" . $image;
+                echo '<img src="' . $imagePath . '" alt="Image" width="100px">';
+                ?> </td>
+
                 
                 <td>
                     <a href="index.php?action=edit&id=<?php echo $festival->getId_festival() ?>" class="btn btn-success btn-sm">Modifier</a>
@@ -53,30 +53,6 @@ ob_start();
   <?php
 $content = ob_get_clean();
 include_once 'layout.php';
-?>
-<script>
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-</script>
 
 
  
