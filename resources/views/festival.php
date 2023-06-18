@@ -30,11 +30,7 @@ ob_start();
                 <td><?= $festival->getDate() ?></td>
                 <td><?= $festival->getNom() ?> </td>
                 <td><?= $festival->getLocalisation() ?> </td>
-                <td> <?php
-                $image = $festival->getPhoto();
-                $imagePath = "assets/images/festival/" . $image;
-                echo '<img src="' . $imagePath . '" alt="Image" width="100px">';
-                ?> </td>
+                <td><?= $festival->getPhoto() ?> </td>
                 
                 <td>
                     <a href="index.php?action=editFestival&id_festival=<?php echo $festival->getId_festival() ?>" class="btn btn-success btn-sm"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

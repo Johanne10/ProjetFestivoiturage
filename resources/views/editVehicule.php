@@ -5,7 +5,7 @@ ob_start();
     <form action="index.php?action=updateVehicule" method="post">
         <div class="form-group">
             <label>Type</label>
-            <input type="hidden" value="<?= $data->getId_vehicule_festival()?>"  name="id_voiture_festival" >
+            <input type="hidden" value="<?= $data->getId_vehicule_festival()?>"  name="id_vehicule_festival" >
 
             <input type="text" value="<?= $data->getType()?>" class="form-control" name="type">
         </div>
