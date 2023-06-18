@@ -27,7 +27,7 @@ class Festivalier extends Model
      */
     public function setNom_festivalier($nom_festivalier)
     {
-        $this->date = $nom_festivalier;
+        $this->nom_festivalier = $nom_festivalier;
         return $this;
     }
 
@@ -63,7 +63,7 @@ class Festivalier extends Model
      */
     public function setDate_de_presence($date_de_presence)
     {
-        $this->localisation = $date_de_presence;
+        $this->date_de_presence = $date_de_presence;
         return $this;
     }
 
@@ -156,7 +156,7 @@ class Festivalier extends Model
 
     public function destroy($id_festivalier)
     {
-        $sqlState = self::database()->prepare("DELETE FROM festival WHERE id_festivalier = ?");
+        $sqlState = self::database()->prepare("DELETE FROM festivalier WHERE id_festivalier = ?");
         return $sqlState->execute([$id_festivalier]);
     }
 }

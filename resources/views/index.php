@@ -6,21 +6,7 @@ ob_start();
 ?>
      
      <!--  Header End -->
-     
-          <p class="text-center">Recherchez votre covoiturage</p>
-                <form>
-                    <label for="exampleInputtext1" class="form-label">Départ</label>
-                    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp">
-                    <label for="exampleInput" class="form-label">Destination</label>
-                    <input type="text" class="form-control" id="exampleInput">
-                    <label for="exampleInput" class="form-label">Date</label>
-                    <input type="date" class="form-control" id="exampleInput" aria-describedby="textHelp">
-                    <label for="exampleInput" class="form-label">Nombre de passager </label>
-                    <input type="number" class="form-control" id="exampleInput" aria-describedby="textHelp">
-                    <br/>
-                    <a href="index.php?action=reach" class="btn btn-primary">Recherche</a>
-                  </form>
-
+    
     
       <div class="container-fluid">
         <!--  Row 1 -->

@@ -30,7 +30,7 @@ ob_start();
                 <td><?= $festivalier->getMot_de_passe() ?> </td>
                 <td>
                     <a href="index.php?action=edit&id=<?php echo $festivalier->getId_festivalier() ?>" class="btn btn-success btn-sm">Modifier</a>
-                    <a onclick="return confirm('Voulez vous vraiment supprimer le festivalier <?= $festivalier->getPrenom() ?>');" href="index.php?action=destroy&id=<?php echo $festivalier->getId_festivalier() ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                    <a onclick="return confirm('Voulez vous vraiment supprimer le festivalier <?= $festivalier->getPrenom() ?>');" href="index.php?action=destroyFestivalier&id_festivalier=<?php echo $festivalier->getId_festivalier() ?>" class="btn btn-danger btn-sm">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

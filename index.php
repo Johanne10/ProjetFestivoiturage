@@ -39,6 +39,9 @@ if (isset($_GET['action'])) {
         case 'createFestivalier':
                 FestivalierController::createAction();
                     break;
+        case 'createVehicule':
+                VehiculeController::createAction();
+                            break;
         case 'store':
             VoitureController::storeAction();
             break;
@@ -46,8 +49,13 @@ if (isset($_GET['action'])) {
             FestivalController::storeAction();
                 break;
         case 'storeFestivalier':
-            FestivalierController::storeAction();
+            
+            FestivalierController::storeAction2();
                         break;
+        case 'storeVehicule':
+            
+            VehiculeController::storeAction3();
+                 break;
         case 'edit':
             VoitureController::editAction();
             break;
@@ -60,6 +68,12 @@ if (isset($_GET['action'])) {
         case 'destroyFestival':
             FestivalController::destroyAction2();
                 break;
+        case 'destroyFestivalier':
+            FestivalierController::destroyAction3();
+                        break;
+        case 'destroyVehicule':
+                VehiculeController::destroyAction4();
+                    break;
         case 'authentication-login':
         Authentification_loginController::indexAction();
                 break;

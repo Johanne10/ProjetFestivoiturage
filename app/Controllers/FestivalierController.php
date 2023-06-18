@@ -12,7 +12,9 @@ class FestivalierController extends BaseController
     public static function getModel()
     {
         if (is_null(static::$model)) {
+            
             static::$model = new Festivalier();
+          
         }
         return static::$model;
     }
@@ -32,9 +34,10 @@ class FestivalierController extends BaseController
         static::view('createFestivalier');
     }
 
-    public static function storeAction()
+    public static function storeAction2()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+           
             $created = static::getModel()
                 ->setNom_festivalier($_POST['nom_festivalier'])
                 ->setPrenom($_POST['prenom'])
@@ -42,6 +45,7 @@ class FestivalierController extends BaseController
                 ->setPseudo($_POST['pseudo'])
                 ->setMot_de_passe($_POST['mot_de_passe'])
                 ->create();
+              
            
                 static::redirect('festivalier');
            
@@ -72,16 +76,14 @@ class FestivalierController extends BaseController
         }
     }
 
-    public static function destroyAction()
+    public static function destroyAction3()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $deleted = static::getModel()
-                ->destroy($_GET['id']);
-            if ($deleted === true) {
+                ->destroy($_GET['id_festivalier']);
+           
                 static::redirect('festivalier');
-            } else {
-                echo "Erreur";
-            }
+          
         }
     }
 }

@@ -5,7 +5,7 @@ ob_start();
     <form action="index.php?action=storeFestivalier" method="post">
         <div class="form-group">
             <label>Nom</label>
-            <input type="text" id="nom_festivalier" class="form-control" name="nom_festivalier" required="required" placeholder="Veuillez remplir avec votre nom SVP ...">
+            <input type="text" id="nom_festivalier" class="form-control" name="nom_festivalier"  placeholder="Veuillez remplir avec votre nom SVP ...">
         </div>
         <div class="form-group">
             <label>Prénom</label>

@@ -29,10 +29,10 @@ class VehiculeController extends BaseController
 
     public static function createAction()
     {
-        static::view('create');
+        static::view('createVehicule');
     }
 
-    public static function storeAction()
+    public static function storeAction3()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $created = static::getModel()
@@ -40,11 +40,9 @@ class VehiculeController extends BaseController
                 ->setPlace($_POST['place'])
                 ->setDatealler($_POST['datealler'])
                 ->create();
-            if ($created === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+            
+                static::redirect('vehicule');
+           
         }
     }
 
@@ -69,16 +67,14 @@ class VehiculeController extends BaseController
         }
     }
 
-    public static function destroyAction()
+    public static function destroyAction4()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $deleted = static::getModel()
-                ->destroy($_GET['id']);
-            if ($deleted === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+                ->destroy($_GET['id_vehicule_festival']);
+            
+                static::redirect('vehicule');
+           
         }
     }
 }
