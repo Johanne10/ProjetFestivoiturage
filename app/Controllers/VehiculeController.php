@@ -39,7 +39,6 @@ class VehiculeController extends BaseController
                 ->setType($_POST['type'])
                 ->setPlace($_POST['place'])
                 ->setDatealler($_POST['datealler'])
-                ->setDateretour($_POST['dateretour'])
                 ->create();
             if ($created === true) {
                 static::redirect('list');
@@ -60,8 +59,7 @@ class VehiculeController extends BaseController
             $updated = static::getModel()
                 ->setType($_POST['type'])
                 ->setPlace($_POST['place'])
-                ->setDatealler($_POST['datealler'])
-                ->setDateretour($_POST['dateretour'])
+                ->setDatealler($_POST['datealler'])  
                 ->update($_POST['id']);
             if ($updated === true) {
                 static::redirect('list');

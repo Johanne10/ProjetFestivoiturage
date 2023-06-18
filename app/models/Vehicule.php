@@ -9,7 +9,6 @@ class Vehicule extends Model
     private $type;
     private $place;
     private $datealler;
-    private $dateretour;
     
     /**
      * @return mixed
@@ -65,25 +64,6 @@ class Vehicule extends Model
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDateretour()
-    {
-        return $this->dateretour;
-    }
-
-    /**
-     * @param mixed $dateretour
-     * @return Vehicule
-     */
-    public function setDateretour($dateretour)
-    {
-        $this->dateretour = $dateretour;
-        return $this;
-    }
-
-
     
     public function latest()
     {
@@ -93,12 +73,11 @@ class Vehicule extends Model
 
     public function create()
     {
-        $sqlState = static::database()->prepare("INSERT INTO vehicule VALUES(null,?,?,?,?)");
+        $sqlState = static::database()->prepare("INSERT INTO vehicule VALUES(null,?,?,?)");
         return $sqlState->execute([
             $this->type,
             $this->place,
-            $this->datealler,
-            $this->dateretour
+            $this->datealler
         ]);
     }
 
@@ -118,16 +97,13 @@ class Vehicule extends Model
             SET 
                 type = ?,
                 place   = ?,
-                datealler   = ?,
-                dateretour   = ?
-
+                datealler   = ?
             WHERE id_vehicule_festival = ?
         ");
         return $sqlState->execute([
             $this->type,
             $this->place,
             $this->datealler,
-            $this->dateretour,
            $id_vehicule_festival
         ]);
     }

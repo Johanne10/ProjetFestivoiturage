@@ -4,7 +4,7 @@ $title = "Festivoiturage";
 
 ob_start();
 ?>
-        <a href="index.php?action=create" class="btn btn-primary">Ajouter festivalier</a>
+        <a href="index.php?action=createFestivalier" class="btn btn-primary">Ajouter festivalier</a>
     <table class="table table-striped">
         <thead>
         <tr>

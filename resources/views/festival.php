@@ -4,7 +4,7 @@ $title = "Festivoiturage";
 ob_start();
 ?>
  
-        <a href="index.php?action=create" class="btn btn-primary">Ajouter festival</a>
+        <a href="index.php?action=createFestival" class="btn btn-primary">Ajouter festival</a>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -29,7 +29,7 @@ ob_start();
                 
                 <td>
                     <a href="index.php?action=edit&id=<?php echo $festival->getId_festival() ?>" class="btn btn-success btn-sm">Modifier</a>
-                    <a onclick="return confirm('Voulez vous vraiment supprimer le festival <?= $festival->getNom() ?>');" href="index.php?action=destroy&id=<?php echo $festival->getId_festival() ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                    <a onclick="return confirm('Voulez vous vraiment supprimer le festival <?= $festival->getNom() ?>');" href="index.php?action=destroyFestival&id_festival=<?php echo $festival->getId_festival() ?>" class="btn btn-danger btn-sm">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -29,7 +29,7 @@ class FestivalierController extends BaseController
 
     public static function createAction()
     {
-        static::view('create');
+        static::view('createFestivalier');
     }
 
     public static function storeAction()
@@ -42,11 +42,9 @@ class FestivalierController extends BaseController
                 ->setPseudo($_POST['pseudo'])
                 ->setMot_de_passe($_POST['mot_de_passe'])
                 ->create();
-            if ($created === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+           
+                static::redirect('festivalier');
+           
         }
     }
 
@@ -67,7 +65,7 @@ class FestivalierController extends BaseController
                 
                 ->update($_POST['id']);
             if ($updated === true) {
-                static::redirect('list');
+                static::redirect('festivalier');
             } else {
                 echo "Erreur";
             }
@@ -80,7 +78,7 @@ class FestivalierController extends BaseController
             $deleted = static::getModel()
                 ->destroy($_GET['id']);
             if ($deleted === true) {
-                static::redirect('list');
+                static::redirect('festivalier');
             } else {
                 echo "Erreur";
             }

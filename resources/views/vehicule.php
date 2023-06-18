@@ -12,7 +12,6 @@ ob_start();
             <th>Type</th>
             <th>Nombre de place</th>
             <th>Date d'aller</th>
-            <th>Date de retour<th>
             <th>Actions</th>
         </tr>
 
@@ -25,7 +24,6 @@ ob_start();
                 <td><?= $vehicule->getType() ?></td>
                 <td><?= $vehicule->getPlace() ?> </td>
                 <td><?= $vehicule->getDatealler() ?></td>
-                <td><?= $vehicule->getDateretour() ?></td>
                
                 <td>
                     <a href="index.php?action=edit&id=<?php echo $vehicule->getId_vehicule_festival() ?>" class="btn btn-success btn-sm">Modifier</a>

@@ -14,4 +14,4 @@ class Authentification_registerController extends BaseController{
     } 
 }
 
-?>
+

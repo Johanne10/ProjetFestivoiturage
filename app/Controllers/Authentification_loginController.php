@@ -5,9 +5,12 @@ namespace app\Controllers;
 
 class Authentification_loginController extends BaseController{
 
-    public static function indexAction(){
+    public static function indexAction()
+    {
+       
+
         // View (afficher les données)
-                static::view("authentification-login");
+                static::view("authentication-login");
     } 
 }
 
