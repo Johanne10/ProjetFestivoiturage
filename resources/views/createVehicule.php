@@ -1,5 +1,5 @@
 <?php
-$title = "Ajouter un festival";
+$title = "Ajouter un véhicule";
 ob_start();
 ?>
     <form action="index.php?action=storeVehicule" method="post">

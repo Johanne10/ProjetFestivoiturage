@@ -29,10 +29,10 @@ class UtilisateurController extends BaseController
 
     public static function createAction()
     {
-        static::view('create');
+        static::view('createUtilisateur');
     }
 
-    public static function storeAction()
+    public static function storeAction4()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $created = static::getModel()
@@ -40,11 +40,9 @@ class UtilisateurController extends BaseController
                 ->setMdp($_POST['mdp'])
                 ->setRole($_POST['role'])
                 ->create();
-            if ($created === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+            
+                static::redirect('utilisateur');
+           
         }
     }
 
@@ -69,16 +67,14 @@ class UtilisateurController extends BaseController
         }
     }
 
-    public static function destroyAction()
+    public static function destroyAction5()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $deleted = static::getModel()
-                ->destroy($_GET['id']);
-            if ($deleted === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+                ->destroy($_GET['id_utilis']);
+           
+                static::redirect('utilisateur');
+           
         }
     }
 }

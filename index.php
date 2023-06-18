@@ -42,6 +42,9 @@ if (isset($_GET['action'])) {
         case 'createVehicule':
                 VehiculeController::createAction();
                             break;
+        case 'createUtilisateur':
+                UtilisateurController::createAction();
+                    break;
         case 'store':
             VoitureController::storeAction();
             break;
@@ -56,6 +59,10 @@ if (isset($_GET['action'])) {
             
             VehiculeController::storeAction3();
                  break;
+        case 'storeUtilisateur':
+            
+                    UtilisateurController::storeAction4();
+                         break;
         case 'edit':
             VoitureController::editAction();
             break;
@@ -74,6 +81,9 @@ if (isset($_GET['action'])) {
         case 'destroyVehicule':
                 VehiculeController::destroyAction4();
                     break;
+        case 'destroyUtilisateur':
+            UtilisateurController::destroyAction5();
+                            break;
         case 'authentication-login':
         Authentification_loginController::indexAction();
                 break;
