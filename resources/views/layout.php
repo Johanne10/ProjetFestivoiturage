@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['role'])&&$_GET['action']!='authentication-login' ) {
+    header('Location: index.php?action=authentication-login');
+  exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,14 +60,19 @@
                 <span class="hide-menu">Festival</span>
               </a>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="index.php?action=festivalier" aria-expanded="false">
-                <span>
-                <i class="ti ti-friends"></i>
-                </span>
-                <span class="hide-menu">Festivalier</span>
-              </a>
-            </li>
+            <?php
+            if (isset($_SESSION['role'])&&$_SESSION['role']=='Admin') { ?>
+              
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="index.php?action=festivalier" aria-expanded="false">
+                  <span>
+                  <i class="ti ti-friends"></i>
+                  </span>
+                  <span class="hide-menu">Festivalier</span>
+                </a>
+              </li>
+         <?php   }
+            ?>
            
             <li class="sidebar-item">
               <a class="sidebar-link" href="index.php?action=vehicule" aria-expanded="false">
@@ -70,6 +82,7 @@
                 <span class="hide-menu">Véhicule</span>
               </a>
             </li>
+            <?php    if (isset($_SESSION['role'])&&$_SESSION['role']=='Admin') { ?>
             <li class="sidebar-item">
               <a class="sidebar-link" href="index.php?action=utilisateur" aria-expanded="false">
                 <span>
@@ -78,26 +91,28 @@
                 <span class="hide-menu">Utilisateur</span>
               </a>
             </li>
-            <li class="nav-small-cap">
+            <!-- <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">AUTH</span>
-            </li>
-            <li class="sidebar-item">
+            </li> -->
+            <?php   }
+            ?>
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="index.php?action=authentication-login" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
                 <span class="hide-menu">Se connecter</span>
               </a>
-            </li>
-            <li class="sidebar-item">
+            </li> -->
+            <!-- <li class="sidebar-item">
               <a class="sidebar-link" href="index.php?action=authentication-register" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
                 <span class="hide-menu">S'inscrire</span>
               </a>
-            </li>
+            </li> -->
            
          
           </ul>
@@ -147,7 +162,7 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="./authentication-login.php" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="./index.php?action=logout-method" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>

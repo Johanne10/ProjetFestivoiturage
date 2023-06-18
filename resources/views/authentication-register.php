@@ -24,21 +24,25 @@
                   <img src="./assets/images/logos/dark-logo.svg" width="180" alt="">
                 </a>
                 <p class="text-center">Application pour le recensement de vehicule pour les festivals</p>
-                <form>
+                <form action="index.php?action=storeUtilisateur" method="post">
                   <div class="mb-3">
                     <label for="exampleInputtext1" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp">
+                    <input type="text" id="login" class="form-control" name="login" required="required" aria-describedby="textHelp">
                   </div>
                  
                   <div class="mb-4">
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" name="mdp" required="required" id="mdp">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Role</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <select name="role" id="role" class="selectpicker">
+                          <option value="">--Choississer un role--</option>
+                          <option value="Admin">Admin</option>
+                          <option value="Utilisateur lambda">Utilisateur lambda</option>
+                    </select>
                   </div>
-                  <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Enregistrer</a>
+                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Enregistrer</button>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">Vous avez déja un compte?</p>
                     <a class="text-primary fw-bold ms-2" href="index.php?action=authentication-login">Se connecter</a>

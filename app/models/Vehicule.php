@@ -92,6 +92,7 @@ class Vehicule extends Model
 
     public function update($id_vehicule_festival)
     {
+        
         $sqlState = static::database()->prepare("
             UPDATE vehicule
             SET 
@@ -100,6 +101,7 @@ class Vehicule extends Model
                 datealler   = ?
             WHERE id_vehicule_festival = ?
         ");
+        
         return $sqlState->execute([
             $this->type,
             $this->place,

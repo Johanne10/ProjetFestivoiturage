@@ -19,7 +19,7 @@ ob_start();
         </div>
         <div class="form-group">
             <label>Photo</label>
-            <input type="file" class="form-control" name="photo" id="photo">
+            <input type="text"  value="<?= $data->getPhoto()?>"  class="form-control" name="photo">
         </div>
         <button type="submit" class="btn btn-primary my-3">Modifier</button>
     </form>

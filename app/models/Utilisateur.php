@@ -10,6 +10,25 @@ class Utilisateur extends Model
     private $mdp;
     private $role;
     
+    public function authenticate($email, $password)
+    {
+        // Query the database to check if the user exists and the password is correct
+        $stmt = static::database()->prepare('SELECT * FROM utilisateur WHERE `login` = ?');
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
+
+        // If the user exists and the password is correct
+        if ($user && ($password== $user['mdp'])) {
+            // Return the user's ID
+            return $user;
+        } else {
+            // If the user does not exist or the password is incorrect, return false
+            return false;
+        }
+    }
+
+   
+   
     /**
      * @return mixed
      */

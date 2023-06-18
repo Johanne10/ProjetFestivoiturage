@@ -106,8 +106,14 @@ if (isset($_GET['action'])) {
             UtilisateurController::destroyAction5();
                             break;
         case 'authentication-login':
-        Authentification_loginController::indexAction();
+             Authentification_loginController::indexAction();
                 break;
+        case 'authenticate-method':
+             Authentification_loginController::authenticate();
+                    break;
+        case 'logout-method':
+             Authentification_loginController::logout();
+                        break;
         case 'authentication-register':
         Authentification_registerController::indexAction();
             break;
@@ -117,10 +123,10 @@ if (isset($_GET['action'])) {
        
         
         default:
-        
+        IndexController::indexAction();
            
             break;
     }
-}{
+}else{
     IndexController::indexAction();
 }

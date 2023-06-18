@@ -12,9 +12,12 @@ ob_start();
             <input type="password" class="form-control" name="mdp" id="mdp" placeholder="Veuillez saisir le mot de passe SVP ...">
         </div>
         <div class="form-group">
-            <label>Role</label>
-            <input type="text" class="form-control" name="role" id="role" placeholder="Veuillez remplir avec le role assigné à cet utilisateur SVP ...">
-        </div>
+            <label>Role</label> 
+            <select name="role" id="role" class="selectpicker">
+                          <option value="">--Choississer un role--</option>
+                          <option value="Admin">Admin</option>
+                          <option value="Utilisateur lambda">Utilisateur lambda</option>
+                    </select>        </div>
         
         <button type="submit" class="btn btn-primary my-3">Ajouter</button>
     </form>
