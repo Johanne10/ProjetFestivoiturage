@@ -49,7 +49,7 @@ class FestivalController extends BaseController
 
     public static function editAction()
     {
-        static::view('edit', self::getModel()::view($_GET['id_festival']));
+        static::view('editFestival', self::getModel()::view($_GET['id_festival']));
     }
 
     public static function updateAction()
@@ -62,11 +62,9 @@ class FestivalController extends BaseController
                 ->setPhoto($_POST['photo'])
                 
                 ->update($_POST['id_festival']);
-            if ($updated === true) {
+           
                 static::redirect('festival');
-            } else {
-                echo "Erreur";
-            }
+          
         }
     }
 

@@ -48,7 +48,7 @@ class UtilisateurController extends BaseController
 
     public static function editAction()
     {
-        static::view('edit', self::getModel()::view($_GET['id']));
+        static::view('editUtilisateur', self::getModel()::view($_GET['id_utilis']));
     }
 
     public static function updateAction()
@@ -58,12 +58,10 @@ class UtilisateurController extends BaseController
                 ->setLogin($_POST['login'])
                 ->setMdp($_POST['mdp'])
                 ->setRole($_POST['role'])
-                ->update($_POST['id']);
-            if ($updated === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+                ->update($_POST['id_utilis']);
+           
+                static::redirect('utilisateur');
+           
         }
     }
 

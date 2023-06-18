@@ -48,22 +48,20 @@ class VehiculeController extends BaseController
 
     public static function editAction()
     {
-        static::view('edit', self::getModel()::view($_GET['id']));
+        static::view('editVehicule', self::getModel()::view($_GET['id_vehicule_festival']));
     }
 
     public static function updateAction()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $updated = static::getModel()
-                ->setType($_POST['type'])
-                ->setPlace($_POST['place'])
-                ->setDatealler($_POST['datealler'])  
-                ->update($_POST['id']);
-            if ($updated === true) {
-                static::redirect('list');
-            } else {
-                echo "Erreur";
-            }
+            ->setType($_POST['type'])
+            ->setPlace($_POST['place'])
+            ->setDatealler($_POST['datealler'])
+                ->update($_POST['id_vehicule_festival']);
+           
+                static::redirect('vehicule');
+           
         }
     }
 

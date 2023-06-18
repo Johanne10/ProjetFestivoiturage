@@ -54,7 +54,7 @@ class FestivalierController extends BaseController
 
     public static function editAction()
     {
-        static::view('edit', self::getModel()::view($_GET['id']));
+        static::view('editFestivalier', self::getModel()::view($_GET['id_festivalier']));
     }
 
     public static function updateAction()
@@ -67,12 +67,10 @@ class FestivalierController extends BaseController
                 ->setPseudo($_POST['pseudo'])
                 ->setMot_de_passe($_POST['mot_de_passe'])
                 
-                ->update($_POST['id']);
-            if ($updated === true) {
+                ->update($_POST['id_festivalier']);
+           
                 static::redirect('festivalier');
-            } else {
-                echo "Erreur";
-            }
+         
         }
     }
 

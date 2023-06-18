@@ -66,9 +66,30 @@ if (isset($_GET['action'])) {
         case 'edit':
             VoitureController::editAction();
             break;
-        case 'update':
-            VoitureController::updateAction();
+        case 'editFestival':
+                FestivalController::editAction();
+                break;
+        case 'editFestivalier':
+                FestivalierController::editAction();
+                    break;
+        case 'editVehicule':
+                VehiculeController::editAction();
+                            break;
+        case 'editUtilisateur':
+                UtilisateurController::editAction();
+                    break;
+        case 'updateFestival':
+            FestivalController::updateAction();
             break;
+        case 'updateFestivalier':
+            FestivalierController::updateAction();
+                break;
+        case 'updateVehicule':
+            VehiculeController::updateAction();
+                        break;
+        case 'updateUtilisateur':
+            UtilisateurController::updateAction();
+                        break;
         case 'destroy':
             VoitureController::destroyAction();
             break;
